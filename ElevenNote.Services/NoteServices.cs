@@ -11,7 +11,6 @@ namespace ElevenNote.Services
     public class NoteServices
     {
         private readonly Guid _userId;
-        private int noteId;
 
         public NoteServices(Guid userId)
         {
@@ -61,7 +60,7 @@ namespace ElevenNote.Services
 
        
 
-        public NoteDetail GetNoteById(int id)
+        public NoteDetail GetNoteById(int noteId)
         {
             using (var ctx = new ApplicationDbContext())
             {
